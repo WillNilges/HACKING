@@ -1,4 +1,10 @@
-FROM debian:buster
+FROM debian:bookworm
 
 RUN apt-get -y update
-RUN apt-get -y install neovim build-essential
+RUN apt-get -y --fix-missing update
+RUN apt-get -y install neovim build-essential git zip unzip
+
+# Get my dotfiles
+RUN mkdir /root/.config /root/Code
+RUN git clone https://github.com/willnilges/dotfiles /root/Code/dotfiles
+RUN bash /root/Code/dotfiles/symlink_setup.sh

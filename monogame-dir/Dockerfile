@@ -1,6 +1,4 @@
-#FROM hacking-deb
-
-INCLUDE+ ../Dockerfile.debian
+FROM localhost/hacking-debian
 
 RUN apt-get -y update
 RUN apt-get -y install vim wget git fonts-liberation fontconfig-config tmux xterm pulseaudio
