@@ -8,3 +8,5 @@ RUN apt-get -y install neovim build-essential git zip unzip
 RUN mkdir /root/.config /root/Code
 RUN git clone https://github.com/willnilges/dotfiles /root/Code/dotfiles
 RUN bash /root/Code/dotfiles/symlink_setup.sh
+RUN nvim --headless -c 'autocmd User PackerComplete quitall'
+RUN nvim --headless -c 'PackerUpdate' -c 'quitall'

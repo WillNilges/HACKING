@@ -8,3 +8,4 @@ RUN wget https://packages.microsoft.com/config/debian/10/packages-microsoft-prod
     apt-get update && \
     apt-get install -y dotnet-sdk-6.0 dotnet-runtime-6.0 libgtk-3-0
 RUN dotnet tool install -g dotnet-mgcb; dotnet tool restore
+RUN nvim --headless -c 'MasonInstall omnisharp' -c 'quitall'
