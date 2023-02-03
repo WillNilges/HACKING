@@ -5,5 +5,8 @@ debian:
 monogame: debian
 	podman build monogame-dir/ --tag=hacking-monogame
 
+rust: debian
+	podman build rust-dir/ --tag=hacking-rust
+
 help:
-	@echo debian monogame
+	@echo debian monogame rust-nvidia
