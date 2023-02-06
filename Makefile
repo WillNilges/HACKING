@@ -8,5 +8,8 @@ monogame: debian
 rust: debian
 	podman build rust-dir/ --tag=hacking-rust
 
+xournalpp:
+	podman build xournalpp-dir/ --tag hacking-xournalpp
+
 help:
-	@echo debian monogame rust-nvidia
+	@echo debian monogame rust xournalpp
