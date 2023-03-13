@@ -48,7 +48,7 @@ podman run --name="$name" --rm -it                                     \
     --annotation io.crun.keep_original_groups=1                        \
     -v "$xauth_path"/.Xauthority:/root/.Xauthority:Z                   \
     -v /tmp/.X11-unix:/tmp/.X11-unix                                   \
-    -v "$work_path":/devcade:Z                                            \
+    -v "$work_path":/workdir:Z                                         \
     --env 'PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH'  \
     "$container"
 rm -rf "$xauth_path"
