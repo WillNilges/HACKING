@@ -1,8 +1,7 @@
-FROM debian:bookworm
+FROM archlinux
 
-RUN apt-get -y update
-RUN apt-get -y --fix-missing update
-RUN apt-get -y install neovim build-essential git zip unzip curl python3 wget
+RUN pacman --noconfirm -Syu
+RUN pacman --noconfirm -S neovim base-devel git zip unzip curl python wget
 
 # Get my dotfiles
 RUN mkdir /root/.config /root/Code
