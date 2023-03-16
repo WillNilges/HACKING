@@ -1,4 +1,7 @@
 
+arch:
+	podman build -f Dockerfile.arch -t hacking-arch
+
 debian:
 	podman build -f Dockerfile.debian -t hacking-debian
 
